@@ -31,7 +31,7 @@ class TwitterController extends Controller
     {
         // TODO laravel connection
         $redis = new Redis();
-        $redis->connect('localhost', 6379);
+        $redis->connect('127.0.0.1', 6379);
 
         $redisTrends = json_decode($redis->get('woeid_hashtags'));
 
@@ -58,7 +58,7 @@ class TwitterController extends Controller
 
         // TODO laravel connection
         $redis = new Redis();
-        $redis->connect('localhost', 6379);
+        $redis->connect('127.0.0.1', 6379);
 
         // Api Woeid trends
         $trends = [];
