@@ -20,7 +20,7 @@ class DaemonController extends Controller
 
         // TODO Preguntar per la configuració intrínsica de laravel: no funciona.
         $redis = new Redis();
-        $redis->connect('localhost', 6379);
+        $redis->connect('127.0.0.1', 6379);
         $redis->publish('daemon-notify', 'stop');
 
         $response = array('success' => true);
@@ -38,7 +38,7 @@ class DaemonController extends Controller
     public function updateTrends($trends = ['barcelona']){
 
         $redis = new Redis();
-        $redis->connect('localhost', 6379);
+        $redis->connect('127.0.0.1', 6379);
         $redis->publish('daemon-notify', json_encode($trends));
 
         $response = array('success' => true);
