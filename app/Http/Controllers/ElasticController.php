@@ -30,14 +30,14 @@ class ElasticController extends Controller
                         "tweets": {
                             "filter": {
                                 "term": {
-                                    "tweet.entities.hashtags.text": "barcelona"
+                                    "tweet.text": "barcelona"
                                 }
                             },
                             "aggs": {
                                 "histogram_tweets": {
                                     "histogram": {
                                         "field": "tweet.created_at",
-                                        "interval": 36000
+                                        "interval": 1500000
                                     }
                                 }
                             }
