@@ -154,7 +154,7 @@ return [
         //
         // MongoDB ORM plugin
         //
-        Jenssegers\Mongodb\MongodbServiceProvider::class,
+        //Jenssegers\Mongodb\MongodbServiceProvider::class,
 
         //
         // ES
